@@ -15,9 +15,9 @@ const HomePage = () => {
     <div className="container">
       <h1>Liste des Films Studio Ghibli</h1>
       <div className="film-list">
-        {films.map((film) => (
-          <FilmCard key={film.id} film={film} />
-        ))}
+        {films?.map((film) =>
+          film ? <FilmCard key={film.id} film={film} /> : null
+        )}
       </div>
     </div>
   );
