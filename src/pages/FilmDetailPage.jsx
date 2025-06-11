@@ -1,4 +1,3 @@
-import React from "react";
 import { useParams } from "react-router-dom";
 import { useFilmStore } from "../store/store";
 
@@ -8,12 +7,17 @@ const FilmDetailPage = () => {
     state.films.find((film) => film.id === id)
   );
 
-  if (!film) return <p>Chargement en cours...</p>;
+  if (!film) return <p>Film introuvable.</p>;
 
   return (
     <div className="container">
       <h1>{film.title}</h1>
-      <img src={film.image} alt={film.title} />
+      <img
+        src={
+          film.image || "https://via.placeholder.com/200x300?text=Pas+d'image"
+        }
+        alt={film.title || "Titre inconnu"}
+      />
       <p>
         <strong>Réalisateur:</strong> {film.director}
       </p>
