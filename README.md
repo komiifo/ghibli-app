@@ -1,6 +1,6 @@
 # 🎬 Application Studio Ghibli
 
-Cette application web permet de consulter, trier, rechercher et gérer ses films préférés du **Studio Ghibli**. Elle a été développée dans le cadre du **Titre Professionnel CDA (Concepteur Développeur d'Applications)**.
+Cette application web permet de consulter, trier, rechercher et gérer ses films préférés du **Studio Ghibli**. 
 
 ## Technologies utilisées
 
