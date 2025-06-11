@@ -1,4 +1,3 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useFilmStore } from "../store/store";
 
@@ -6,13 +5,17 @@ const FilmCard = ({ film }) => {
   const { favorites, toggleFavorite } = useFilmStore();
   const navigate = useNavigate();
 
+  if (!film) return null;
+
   const isFavorite = favorites.some((f) => f.id === film.id);
 
   return (
     <div className="film-card">
       <img
-        src={film.image}
-        alt={film.title}
+        src={
+          film.image || "https://via.placeholder.com/200x300?text=Pas+d'image"
+        }
+        alt={film.title || "Titre inconnu"}
         onClick={() => navigate(`/film/${film.id}`)}
       />
       <h3>{film.title}</h3>
