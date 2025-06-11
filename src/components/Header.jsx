@@ -6,35 +6,38 @@ const Header = () => {
 
   const handleSort = (value) => {
     if (sortBy === value) {
-      setSortBy("");
+      setSortBy(""); 
     } else {
-      setSortBy(value);
+      setSortBy(value); 
     }
   };
 
   return (
     <header className="header">
-      <input
-        type="text"
-        placeholder="Rechercher un film..."
-        onChange={(e) => setSearch(e.target.value)}
-      />
-      <div className="sort-buttons">
+      <div className="search-container">
+        <input
+          type="text"
+          placeholder="Rechercher un film..."
+          onChange={(e) => setSearch(e.target.value)}
+          className="search-input"
+        />
+      </div>
+      <div className="sort-container">
         <button
+          className={`sort-button ${sortBy === "date" ? "active" : ""}`}
           onClick={() => handleSort("date")}
-          className={sortBy === "date" ? "active" : ""}
         >
           Par date
         </button>
         <button
+          className={`sort-button ${sortBy === "title" ? "active" : ""}`}
           onClick={() => handleSort("title")}
-          className={sortBy === "title" ? "active" : ""}
         >
           Par titre
         </button>
         <button
+          className={`sort-button ${sortBy === "score" ? "active" : ""}`}
           onClick={() => handleSort("score")}
-          className={sortBy === "score" ? "active" : ""}
         >
           Par score
         </button>
