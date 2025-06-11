@@ -3,23 +3,31 @@ import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="navbar">
-      <div className="logo">Studio Ghibli</div>
-      <div>
-        <NavLink
-          to="/"
-          className={({ isActive }) => (isActive ? "active" : "")}
-        >
-          Accueil
+    <nav className="navbar">
+      <div className="nav-container">
+        <NavLink to="/" className="nav-logo">
+          <span className="nav-brand">Studio Ghibli</span>
         </NavLink>
-        <NavLink
-          to="/favorites"
-          className={({ isActive }) => (isActive ? "active" : "")}
-        >
-          Favoris
-        </NavLink>
+        <div className="nav-links">
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive ? "nav-link active" : "nav-link"
+            }
+          >
+            Accueil
+          </NavLink>
+          <NavLink
+            to="/favorites"
+            className={({ isActive }) =>
+              isActive ? "nav-link active" : "nav-link"
+            }
+          >
+            Favoris
+          </NavLink>
+        </div>
       </div>
-    </div>
+    </nav>
   );
 };
 
