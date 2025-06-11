@@ -7,9 +7,9 @@ const FilmList = () => {
 
   return (
     <div className="film-list">
-      {films.map((film) => (
-        <FilmCard key={film.id} film={film} />
-      ))}
+      {films?.map((film) =>
+        film ? <FilmCard key={film.id} film={film} /> : null
+      )}
     </div>
   );
 };
