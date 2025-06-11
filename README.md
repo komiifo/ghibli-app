@@ -1,4 +1,3 @@
-
 # 🎬 Application Studio Ghibli
 
 Cette application web permet de consulter, trier, rechercher et gérer ses films préférés du **Studio Ghibli**. Elle a été développée dans le cadre du **Titre Professionnel CDA (Concepteur Développeur d'Applications)**.
@@ -97,7 +96,8 @@ src/
 - Organiser le code de manière modulaire
 - Respecter la charte graphique, l’accessibilité et les bonnes pratiques de développement sécurisé
 
-## 🧑‍💻 Auteur
+## Auteur
 
 Projet réalisé par Jhonatan GALAIS
+
 Dans le cadre du **Titre Professionnel CDA (Concepteur Développeur d’Applications)** – session 2025.
